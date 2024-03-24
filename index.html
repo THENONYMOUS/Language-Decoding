@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
+        <title>Language Translation Template</title>
+    </head>
+    <body>
+        <h1>Template</h1>
+        <p class="main">
+        <table>
+            <tr>
+            <th></th>
+            <th><button id="up" class="button" onclick="if(!roomCheck(100)) return; room += 100; updateScene()">UP</button></th>
+            <th></th>
+            </tr>
+            <tr>
+            <th><button id="left" class="button" onclick="if(!roomCheck(-1)) return; room += -1; updateScene()">LEFT</button></th>
+            <th><section id="display" class="display">yay a thing</section></th>
+            <th><button id="right" class="button" onclick="if(!roomCheck(1)) return; room += 1; updateScene()">RIGHT</button></th>
+            </tr>
+            <tr>
+            <th></th>
+            <th><button id="down" class="button" onclick="if(!roomCheck(-100)) return; room += -100; updateScene()">DOWN</button></th>
+            <th></th>
+            </tr>
+        </table><br><br>
+        </p>
+        <button class="button" onclick="updateScene(); updateJournal()">Refresh Scene</button>
+        <table>
+            <tr>
+                <th id="journal" class="journal">Loading Journal...</th>
+                <th id="wordbank" class="journal">Loading Wordbank...</th>
+            </tr>
+        </table>
+    </body>
+</html>
